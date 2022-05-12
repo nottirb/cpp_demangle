@@ -1,0 +1,5 @@
+project: cpp_demangle
+target: parse_and_stringify
+
+cmds:
+    - cmd: /parse_and_stringify

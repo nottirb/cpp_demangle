@@ -1,0 +1,5 @@
+project: cpp_demangle
+target: cppfilt_differential
+
+cmds:
+    - cmd: /cppfilt_differential
