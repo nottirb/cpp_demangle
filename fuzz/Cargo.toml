@@ -8,10 +8,11 @@ publish = false
 [package.metadata]
 cargo-fuzz = true
 
+[dependencies]
+libfuzzer-sys = "0.4.0"
+
 [dependencies.cpp_demangle]
 path = ".."
-[dependencies.libfuzzer-sys]
-git = "https://github.com/rust-fuzz/libfuzzer-sys.git"
 
 # Prevent this from interfering with workspaces
 [workspace]
@@ -19,8 +20,8 @@ members = ["."]
 
 [[bin]]
 name = "parse_and_stringify"
-path = "fuzzers/parse_and_stringify.rs"
+path = "fuzz_targets/parse_and_stringify.rs"
 
 [[bin]]
 name = "cppfilt_differential"
-path = "fuzzers/cppfilt_differential.rs"
+path = "fuzz_targets/cppfilt_differential.rs"
