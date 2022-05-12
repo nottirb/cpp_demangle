@@ -1,5 +1,4 @@
 #![no_main]
-#![feature(ascii_ctype)]
 
 #[macro_use]
 extern crate libfuzzer_sys;
