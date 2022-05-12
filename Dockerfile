@@ -16,5 +16,4 @@ RUN cd fuzz && ${HOME}/.cargo/bin/cargo fuzz build
 # Package Stage
 FROM ubuntu:20.04
 
-COPY --from=builder cpp_demangle/fuzz/target/x86_64-unknown-linux-gnu/release/cppfilt_differential /
-COPY --from=builder cpp_demangle/fuzz/target/x86_64-unknown-linux-gnu/release/parse_and_stringify /
+COPY --from=builder cpp_demangle/fuzz/target/x86_64-unknown-linux-gnu/release/* /
