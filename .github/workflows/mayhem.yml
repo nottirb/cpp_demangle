@@ -51,14 +51,14 @@ jobs:
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.CPPFILT_DIFFERENTIAL_MAYHEMFILE }} --project cpp-demangle
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.CPPFILT_DIFFERENTIAL_MAYHEMFILE }} --project cpp-demangle --duration 300
           sarif-output: sarif
 
       - name: Start analysis for parse_and_stringify
         uses: ForAllSecure/mcode-action@v1
         with:
           mayhem-token: ${{ secrets.MAYHEM_TOKEN }}
-          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.PARSE_AND_STRINGIFY_MAYHEMFILE }} --project cpp-demangle
+          args: --image ${{ steps.meta.outputs.tags }} --file ${{ env.PARSE_AND_STRINGIFY_MAYHEMFILE }} --project cpp-demangle --duration 300
           sarif-output: sarif
 
       - name: Upload SARIF file(s)
