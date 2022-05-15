@@ -1,5 +1,7 @@
-project: cpp_demangle
+project: cpp-demangle
 target: parse_and_stringify
+
+# image: ghcr.io/nottirb/cpp_demangle:latest
 
 cmds:
     - cmd: /parse_and_stringify

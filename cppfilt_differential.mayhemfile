@@ -1,5 +1,7 @@
-project: cpp_demangle
+project: cpp-demangle
 target: cppfilt_differential
+
+# image: ghcr.io/nottirb/cpp_demangle:latest
 
 cmds:
     - cmd: /cppfilt_differential
